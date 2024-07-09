@@ -36,6 +36,10 @@ A simple Tic Tac Toe game built with React JS and styled with Tailwind CSS. Two 
 
 Contributions are welcome! Submit a pull request to add features or fix bugs.
 
+### Deployment Link 
+
+https://tic-tac-toe-mu-ruddy-30.vercel.app/
+
 ### Acknowledgments
 
 Built as part of the FactWise online test for a Frontend Developer position.
