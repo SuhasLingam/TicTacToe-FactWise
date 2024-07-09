@@ -1,12 +1,13 @@
 import React, { useState } from "react";
-import "./App.css";
+import { TiTick } from "react-icons/ti";
+import { RxCross2 } from "react-icons/rx";
 
 const Square = ({ value, onClick }) => (
   <button
-    className="w-20 h-20 border border-gray-500 flex items-center justify-center text-2xl font-bold"
+    className="flex items-center justify-center w-20 h-20 text-2xl font-bold text-black bg-white border border-white rounded-full"
     onClick={onClick}
   >
-    {value}
+    {value === "X" ? <TiTick /> : value === "O" ? <RxCross2 /> : null}
   </button>
 );
 
@@ -59,20 +60,20 @@ const App = () => {
   };
 
   return (
-    <div className="h-screen flex flex-col items-center justify-center bg-gray-100">
-      <h1 className="text-4xl font-bold mb-4">Tic Tac Toe</h1>
-      <Board squares={squares} onClick={handleClick} />
-      <div className="mt-4">
+    <div className="flex flex-col items-center justify-center h-screen text-white bg-black">
+      <h1 className=" mb-4 font-serif text-6xl">Tic Tac Toe</h1>
+      <div className="mt-4 mb-5">
         {winner ? (
-          <div className="text-2xl font-semibold">{winner} Wins!</div>
+          <div className=" text-2xl font-semibold">{winner} Wins!</div>
         ) : (
           <div className="text-2xl font-semibold">
             Next Player: {isXNext ? "X" : "O"}
           </div>
         )}
       </div>
+      <Board squares={squares} onClick={handleClick} />
       <button
-        className="mt-4 px-4 py-2 bg-blue-500 text-white rounded"
+        className="px-4 py-2 mt-4 text-white bg-red-500 rounded"
         onClick={handleReset}
       >
         Reset
