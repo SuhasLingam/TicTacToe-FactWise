@@ -59,7 +59,25 @@ const App = () => {
   };
 
   return (
-    <>hello</>
+    <div className="h-screen flex flex-col items-center justify-center bg-gray-100">
+      <h1 className="text-4xl font-bold mb-4">Tic Tac Toe</h1>
+      <Board squares={squares} onClick={handleClick} />
+      <div className="mt-4">
+        {winner ? (
+          <div className="text-2xl font-semibold">{winner} Wins!</div>
+        ) : (
+          <div className="text-2xl font-semibold">
+            Next Player: {isXNext ? "X" : "O"}
+          </div>
+        )}
+      </div>
+      <button
+        className="mt-4 px-4 py-2 bg-blue-500 text-white rounded"
+        onClick={handleReset}
+      >
+        Reset
+      </button>
+    </div>
   );
 };
 
