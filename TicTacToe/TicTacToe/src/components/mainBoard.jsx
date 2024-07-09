@@ -4,9 +4,11 @@ import BoardItems from "./boardItems";
 const mainBoard = () => {
   return (
     <div className="h-screen bg-black">
-      <p className=" flex justify-center text-5xl text-white">TIC-TAC-TOE</p>
+      <p className=" pb-11 flex justify-center text-5xl text-white">
+        TIC-TAC-TOE
+      </p>
 
-      <div className=" ml-[200px] grid grid-cols-3 grid-rows-3">
+      <div className=" ml-[150px] gap-3 grid grid-cols-3 grid-rows-3 ">
         <BoardItems />
         <BoardItems />
         <BoardItems />
